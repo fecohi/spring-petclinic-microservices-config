@@ -82,13 +82,12 @@ spring:
     data: classpath*:db/mysql/data.sql
     url: jdbc:mysql://mysql-petclinic-661c8a.mysql.database.azure.com:3306/petclinic?useSSL=true
     initialization-mode: ALWAYS
-
-cloud:
-  azure:
-    keyvault:
-      secret:
-        property-source-enabled: true
-        property-sources:
-          - name: key-vault-property-source-1
-            endpoint: https://kv-petclinic-661c8a.vault.azure.net/
-            credential.managed-identity-enabled: true
+  cloud:
+    azure:
+      keyvault:
+        secret:
+          property-source-enabled: true
+          property-sources:
+            - name: key-vault-property-source-1
+              endpoint: https://kv-petclinic-661c8a.vault.azure.net/
+              credential.managed-identity-enabled: true
